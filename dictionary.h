@@ -3,6 +3,7 @@
 
 #define NCHILD 30 /* a-z, ', -, _, terminator of word */
 
+//using C++ instead ...
 class dictNode
 {
 // Children nodes represent mapping to possible characters
