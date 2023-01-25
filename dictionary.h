@@ -1,3 +1,7 @@
+// CS 480 assignment 1
+// Red Id: 822588384
+// linked to source control
+
 #ifndef DICTIONARY_H
 #define DICTIONARY_H
 
@@ -6,6 +10,15 @@
 //using C++ instead ...
 class dictNode
 {
+
+    public:
+        dictNode *next[NCHILD];
+        bool isValid; //check if its a valid word or not
+        dictNode();
+
+    bool add(const char * wordBeingInserted = nullptr); //indicates whether the word is added
+    dictNode* findEndingNodeOfAStr(const char *strBeingSearched); // search operation for finding the node
+    void countWordsStartingFromANode(int &count); // Count word operation for counting the number of words by the prefix
 // Children nodes represent mapping to possible characters
 // of a word and the terminator character of a word.
 // Note the C string ends with a null \0 character.
@@ -26,5 +39,5 @@ class dictNode
 // at the terminator index position to a new node, to indicate
 // the end of the word.
 //
-dictNode *next[NCHILD];
+
 };
